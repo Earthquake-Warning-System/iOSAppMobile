@@ -1,0 +1,6 @@
+framework module Pods_iOSAppMobile_iOSAppMobileUITests {
+  umbrella header "Pods-iOSAppMobile-iOSAppMobileUITests-umbrella.h"
+
+  export *
+  module * { export * }
+}

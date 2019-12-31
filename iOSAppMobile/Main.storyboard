@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="VSD-1I-JKX">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="GfD-Gz-YYu">
+            <objects>
+                <viewController storyboardIdentifier="main" id="VSD-1I-JKX" customClass="ViewController" customModule="iOSAppMobile" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="BSV-os-dZS">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="4XM-X3-DWN">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="image2.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="hSc-e7-eYL">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PfW-af-FG1" userLabel="GenQRCode">
+                                <rect key="frame" x="137.5" y="508.5" width="100" height="50"/>
+                                <accessibility key="accessibilityConfiguration">
+                                    <accessibilityTraits key="traits" playsSound="YES"/>
+                                </accessibility>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="UCL-c9-AjT"/>
+                                    <constraint firstAttribute="height" constant="50" id="xTJ-ZR-6Xf"/>
+                                </constraints>
+                                <state key="normal" title="GenQRCode">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="20"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="ring:" destination="0z2-a6-eLx" eventType="touchUpInside" id="tfh-YB-lg3"/>
+                                    <segue destination="TkQ-VE-SiC" kind="presentation" id="J0Z-Jx-Nbr"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="hSc-e7-eYL" firstAttribute="leading" secondItem="LeK-QS-kVN" secondAttribute="leading" id="0nW-W4-LbC"/>
+                            <constraint firstItem="hSc-e7-eYL" firstAttribute="leading" secondItem="LeK-QS-kVN" secondAttribute="leading" id="10M-B0-j24"/>
+                            <constraint firstItem="hSc-e7-eYL" firstAttribute="top" secondItem="BSV-os-dZS" secondAttribute="top" id="17k-iS-fwn"/>
+                            <constraint firstItem="PfW-af-FG1" firstAttribute="centerX" secondItem="BSV-os-dZS" secondAttribute="centerX" id="3P5-rX-cj1"/>
+                            <constraint firstItem="4XM-X3-DWN" firstAttribute="trailing" secondItem="LeK-QS-kVN" secondAttribute="trailing" id="6gK-v9-Dy4"/>
+                            <constraint firstItem="4XM-X3-DWN" firstAttribute="top" secondItem="BSV-os-dZS" secondAttribute="top" id="BPA-W6-YjB"/>
+                            <constraint firstItem="hSc-e7-eYL" firstAttribute="trailing" secondItem="LeK-QS-kVN" secondAttribute="trailing" id="IDt-tX-loq"/>
+                            <constraint firstItem="4XM-X3-DWN" firstAttribute="bottom" secondItem="LeK-QS-kVN" secondAttribute="bottom" id="N0z-A1-g6x"/>
+                            <constraint firstItem="hSc-e7-eYL" firstAttribute="trailing" secondItem="LeK-QS-kVN" secondAttribute="trailing" id="POG-k1-hzA"/>
+                            <constraint firstItem="4XM-X3-DWN" firstAttribute="leading" secondItem="LeK-QS-kVN" secondAttribute="leading" id="Pcw-c5-OhH"/>
+                            <constraint firstItem="hSc-e7-eYL" firstAttribute="top" secondItem="BSV-os-dZS" secondAttribute="top" id="eqY-f9-Qpn"/>
+                            <constraint firstItem="PfW-af-FG1" firstAttribute="centerY" secondItem="BSV-os-dZS" secondAttribute="centerY" constant="200" id="pDg-fZ-LCN"/>
+                            <constraint firstItem="hSc-e7-eYL" firstAttribute="bottom" secondItem="LeK-QS-kVN" secondAttribute="bottom" id="pL3-5s-CvP"/>
+                            <constraint firstItem="hSc-e7-eYL" firstAttribute="bottom" secondItem="LeK-QS-kVN" secondAttribute="bottom" id="pR8-lC-XbE"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="LeK-QS-kVN"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vsu-ZW-8po" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="0z2-a6-eLx" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="-202.40000000000001" y="30.134932533733135"/>
+        </scene>
+        <!--qrcode-->
+        <scene sceneID="VPI-AN-UZp">
+            <objects>
+                <viewControllerPlaceholder storyboardName="QRCode" referencedIdentifier="qrcode" id="TkQ-VE-SiC" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="BKs-X9-ei4" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="394" y="245"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="image2.jpg" width="750" height="618"/>
+    </resources>
+</document>
