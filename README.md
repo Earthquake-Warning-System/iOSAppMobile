@@ -14,7 +14,7 @@ If you want to receive notification on your mobile phone when indoor phone detec
 Download this project from git :
 
 ```
-git clone “url”
+git clone “https://github.com/zhe114/iOSAppMobile.git”
 ```
 
 Open project in Xcode and click build  → make project, then you can run this project.
