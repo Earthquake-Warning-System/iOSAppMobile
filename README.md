@@ -27,7 +27,7 @@ Open project in Xcode and click build  → make project, then you can run this p
 We use [SemVer](http://semver.org/) for versioning.
 
 ## Authors
-* zhe114
+* [zhe114](https://github.com/zhe114)
 * mwnl lab
 
 ## License
