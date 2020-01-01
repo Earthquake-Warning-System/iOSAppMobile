@@ -11,24 +11,20 @@ If you want to receive notification on your mobile phone when indoor phone detec
 
 ### Installing
 
-Download this project from git :
-
+Download project from git :
+```sh
+git clone https://github.com/Earthquake-Warning-System/iOSAppMobile.git
 ```
-git clone “url”
-```
+Notice that this project use Firebase to send notification, so you need to build a account in Firebase and create a project for this, basically, you need finish following things.
+* put google-services.json into project
 
+If you need tutorial please check  [FCM setup](https://firebase.google.com/docs/iOS/setup)
 Open project in Xcode and click build  → make project, then you can run this project.
-
-## Built With  
-* [FCM](https://firebase.google.com/docs/cloud-messaging) - For Push Notification
 
 ## Versioning
 
 We use [SemVer](http://semver.org/) for versioning.
 
-## Authors
-* zhe114
-* mwnl lab
 
 ## License
 
