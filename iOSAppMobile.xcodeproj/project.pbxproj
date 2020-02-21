@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		064D98C8EA93815A73D7E14D /* Pods_iOSAppMobileTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6C13DD9810A689AA8F613B53 /* Pods_iOSAppMobileTests.framework */; };
+		7F2DEEE323FFBEAD00DFB9E7 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 7F2DEEE223FFBEAD00DFB9E7 /* GoogleService-Info.plist */; };
 		7F3D5CEB239FDCD400AE21D2 /* image2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 7F3D5CEA239FDCD400AE21D2 /* image2.jpg */; };
 		7F56209E238D238A000B8567 /* QRCode.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7F56209D238D238A000B8567 /* QRCode.storyboard */; };
 		7F5620A0238D239C000B8567 /* QRCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F56209F238D239B000B8567 /* QRCode.swift */; };
@@ -49,6 +50,8 @@
 		50CA4C102E4AC295EE6277B1 /* Pods-iOSAppMobile-iOSAppMobileUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iOSAppMobile-iOSAppMobileUITests.debug.xcconfig"; path = "Target Support Files/Pods-iOSAppMobile-iOSAppMobileUITests/Pods-iOSAppMobile-iOSAppMobileUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		6C13DD9810A689AA8F613B53 /* Pods_iOSAppMobileTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_iOSAppMobileTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6C45952ED330AB9E5571FCD2 /* Pods-iOSAppMobile.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iOSAppMobile.debug.xcconfig"; path = "Target Support Files/Pods-iOSAppMobile/Pods-iOSAppMobile.debug.xcconfig"; sourceTree = "<group>"; };
+		7F2DEEE123FFBC9400DFB9E7 /* iOSAppMobile.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = iOSAppMobile.entitlements; sourceTree = "<group>"; };
+		7F2DEEE223FFBEAD00DFB9E7 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		7F3D5CEA239FDCD400AE21D2 /* image2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = image2.jpg; sourceTree = "<group>"; };
 		7F56209D238D238A000B8567 /* QRCode.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = QRCode.storyboard; sourceTree = "<group>"; };
 		7F56209F238D239B000B8567 /* QRCode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QRCode.swift; sourceTree = "<group>"; };
@@ -136,6 +139,7 @@
 		7F75EC9D232E5C6A0036ACB0 /* iOSAppMobile */ = {
 			isa = PBXGroup;
 			children = (
+				7F2DEEE123FFBC9400DFB9E7 /* iOSAppMobile.entitlements */,
 				7F75EC9E232E5C6A0036ACB0 /* AppDelegate.swift */,
 				7FFBB4892338EB3B00AA790F /* DemoNotificationDelegate.swift */,
 				7F75ECA0232E5C6A0036ACB0 /* ViewController.swift */,
@@ -146,6 +150,7 @@
 				7F75ECA8232E5C6D0036ACB0 /* Assets.xcassets */,
 				7F75ECAA232E5C6D0036ACB0 /* LaunchScreen.storyboard */,
 				7F75ECAD232E5C6D0036ACB0 /* Info.plist */,
+				7F2DEEE223FFBEAD00DFB9E7 /* GoogleService-Info.plist */,
 				7F75ECE2232E60460036ACB0 /* Alert.swift */,
 				7F75ECE4232E604B0036ACB0 /* Alert.mp3 */,
 			);
@@ -303,6 +308,7 @@
 				7F75ECAC232E5C6D0036ACB0 /* LaunchScreen.storyboard in Resources */,
 				7F75ECE5232E604C0036ACB0 /* Alert.mp3 in Resources */,
 				7F75ECA9232E5C6D0036ACB0 /* Assets.xcassets in Resources */,
+				7F2DEEE323FFBEAD00DFB9E7 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

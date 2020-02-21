@@ -8,6 +8,7 @@ If you want to receive notification on your mobile phone when indoor phone detec
 * Requires Swift 4/5 and Xcode 10.x
 * iPhone required above [iOS10.0](https://support.apple.com/en-us/HT208011) and below iOS13.3.
 * iOS10.0 [supported devices](https://en.wikipedia.org/wiki/IOS_10#Supported_devices)
+* If you want to use the function of push notification, you should have [Apple developer account](https://developer.apple.com/support/roles/).
 
 ## Installing
 
@@ -18,8 +19,10 @@ git clone https://github.com/Earthquake-Warning-System/iOSAppIndoor.git
 Notice that this project use Firebase to send notification, so you need to build a account in Firebase and create a project for this, basically, you need finish following things.
 * put google-services.json into project
 
-If you need tutorial please check  [FCM setup](https://firebase.google.com/docs/iOS/setup)
-Open project in Xcode and click build  → make project, then you can run this project.
+If you need tutorial please check  [FCM setup](https://firebase.google.com/docs/ios/setup).
+This is a [link](https://code.tutsplus.com/tutorials/get-started-with-firebase-messaging-for-ios--cms-32126) about fcm workflow of iOS.Please send your problem, if you are still confused after read it.
+
+Last but not least, open project in Xcode and click build  → make project, then you can run this project.
 
 ## Versioning
 
