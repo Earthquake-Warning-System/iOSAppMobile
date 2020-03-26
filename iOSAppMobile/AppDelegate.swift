@@ -68,7 +68,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         if let messageID = userInfo[gcmMessageIDKey] {
             print("Message ID: \(messageID)")
         }
-        
         // Print full message.
         print(userInfo)
     }
@@ -84,7 +83,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         if let messageID = userInfo[gcmMessageIDKey] {
             print("Message ID: \(messageID)")
         }
-        
         // Print full message.
         print(userInfo)
         
@@ -102,7 +100,8 @@ extension AppDelegate : UNUserNotificationCenterDelegate {
                                 willPresent notification: UNNotification,
                                 withCompletionHandler completionHandler: @escaping (UNNotificationPresentationOptions) -> Void) {
         let userInfo = notification.request.content.userInfo
-        
+        let title = notification.request.content.title
+        let body = notification.request.content.body
         // With swizzling disabled you must let Messaging know about the message, for Analytics
         // Messaging.messaging().appDidReceiveMessage(userInfo)
         // Print message ID.
@@ -111,14 +110,18 @@ extension AppDelegate : UNUserNotificationCenterDelegate {
         }
         
         // Print full message.
-        let alertController = UIAlertController(title: "Warning", message: "Detect Shacking", preferredStyle: UIAlertController.Style.alert)
+        let alertController = UIAlertController(title: title, message: body, preferredStyle: UIAlertController.Style.alert)
+        
         let okAction = UIAlertAction(title: "OK", style: UIAlertAction.Style.default) {
             UIAlertAction in
             NSLog("OK Pressed")
-            let urlString = "https://www.cwb.gov.tw/V8/C/E/index.html#eq-5"
-            let url = URL(string: urlString)
-            UIApplication.shared.open(url!, options: [UIApplication.OpenExternalURLOptionsKey(rawValue: ""):""], completionHandler: nil)
+            if (title == "Warning"){
+                let urlString = "https://www.cwb.gov.tw/V8/C/E/index.html#eq-5"
+                let url = URL(string: urlString)
+                UIApplication.shared.open(url!, options: [UIApplication.OpenExternalURLOptionsKey(rawValue: ""):""], completionHandler: nil)
+            }
         }
+        
         alertController.addAction(okAction)
         self.window?.rootViewController?.present(alertController, animated: true, completion: nil)
         print(userInfo)
@@ -132,19 +135,31 @@ extension AppDelegate : UNUserNotificationCenterDelegate {
                                 didReceive response: UNNotificationResponse,
                                 withCompletionHandler completionHandler: @escaping () -> Void) {
         let userInfo = response.notification.request.content.userInfo
+        let title = response.notification.request.content.title
+        let body = response.notification.request.content.body
         // Print message ID.
         if let messageID = userInfo[gcmMessageIDKey] {
             print("Message ID: \(messageID)")
             
         }
-        
         // Print full message.
+        let alertController = UIAlertController(title: title, message: body, preferredStyle: UIAlertController.Style.alert)
+        
+        let okAction = UIAlertAction(title: "OK", style: UIAlertAction.Style.default) {
+            UIAlertAction in
+            NSLog("OK Pressed")
+            if (title == "Warning"){
+                let urlString = "https://www.cwb.gov.tw/V8/C/E/index.html#eq-5"
+                let url = URL(string: urlString)
+                UIApplication.shared.open(url!, options: [UIApplication.OpenExternalURLOptionsKey(rawValue: ""):""], completionHandler: nil)
+            }
+        }
+        
+        alertController.addAction(okAction)
+        self.window?.rootViewController?.present(alertController, animated: true, completion: nil)
         print(userInfo)
-        let urlString = "https://www.cwb.gov.tw/V8/C/E/index.html#eq-5"
-        let url = URL(string: urlString)
-        UIApplication.shared.open(url!, options: [UIApplication.OpenExternalURLOptionsKey(rawValue: ""):""], completionHandler: nil)
         
-        
+        // Change this to your preferred presentation option
         completionHandler()
     }
 }

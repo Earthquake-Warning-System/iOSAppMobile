@@ -17,8 +17,13 @@ class QRCode: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        let data = token!.data(using: String.Encoding.isoLatin1, allowLossyConversion: false)
         
+        print("UIDevice.current.name = \(UIDevice.current.name)")
+        phoneName = ",\(UIDevice.current.name)"
+        tokenName = token! + phoneName
+        print(tokenName as Any)
+
+        let data = tokenName!.data(using: String.Encoding.utf8, allowLossyConversion: false)
         let filter = CIFilter(name: "CIQRCodeGenerator")
         
         filter!.setValue(data, forKey: "inputMessage")
@@ -30,6 +35,7 @@ class QRCode: UIViewController {
     }
     
     func displayQRCodeImage() {
+        
         let scaleX = imgQRCode.frame.size.width / qrcodeImage.extent.width
         let scaleY = imgQRCode.frame.size.height / qrcodeImage.extent.height
         
