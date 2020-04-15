@@ -121,11 +121,13 @@ extension AppDelegate : UNUserNotificationCenterDelegate {
                 UIApplication.shared.open(url!, options: [UIApplication.OpenExternalURLOptionsKey(rawValue: ""):""], completionHandler: nil)
             }
         }
-        
+        if (title == "Notification"){
+            NotificationCenter.default.post(name: Notification.Name("presentEqImage"), object: nil)
+            print("here1")
+        }
         alertController.addAction(okAction)
         self.window?.rootViewController?.present(alertController, animated: true, completion: nil)
         print(userInfo)
-        
         
         // Change this to your preferred presentation option
         completionHandler([])
@@ -140,19 +142,21 @@ extension AppDelegate : UNUserNotificationCenterDelegate {
         // Print message ID.
         if let messageID = userInfo[gcmMessageIDKey] {
             print("Message ID: \(messageID)")
-            
         }
         // Print full message.
         let alertController = UIAlertController(title: title, message: body, preferredStyle: UIAlertController.Style.alert)
         
         let okAction = UIAlertAction(title: "OK", style: UIAlertAction.Style.default) {
             UIAlertAction in
+            print("here3")
+            print(title)
             NSLog("OK Pressed")
             if (title == "Warning"){
                 let urlString = "https://www.cwb.gov.tw/V8/C/E/index.html#eq-5"
                 let url = URL(string: urlString)
                 UIApplication.shared.open(url!, options: [UIApplication.OpenExternalURLOptionsKey(rawValue: ""):""], completionHandler: nil)
             }
+            
         }
         
         alertController.addAction(okAction)

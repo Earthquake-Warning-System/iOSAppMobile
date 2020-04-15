@@ -32,6 +32,10 @@ class QRCode: UIViewController {
         qrcodeImage = filter!.outputImage
         
         displayQRCodeImage()
+        
+        NotificationCenter.default.addObserver(self, selector: #selector(isPresentEqImage(notification:)), name: NSNotification.Name("presentEqImage") , object: nil)
+        
+        
     }
     
     func displayQRCodeImage() {
@@ -45,5 +49,11 @@ class QRCode: UIViewController {
         
     }
 
+    @objc func isPresentEqImage(notification: NSNotification) {
+        let controller = UIAlertController(title: "Scan finished", message: "Complete connection", preferredStyle: .alert)
+        let okAction = UIAlertAction(title: "OK", style: .default, handler: nil)
+        controller.addAction(okAction)
+        present(controller, animated: true, completion: nil)
+    }
 }
 
